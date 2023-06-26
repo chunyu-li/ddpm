@@ -8,6 +8,12 @@ Reference materials:
 - Youtube tutorial video: [Diffusion models from scratch in PyTorch](https://www.youtube.com/watch?v=a4Yfz2FxXiY&t=942s)
 - Colab Notebook: [A Diffusion Model from Scratch in Pytorch](https://colab.research.google.com/drive/1sjy9odlSSy0RBVgMTgP7s99NXsqglsUL?usp=sharing#scrollTo=bpN_LKYwuLx0)
 
+## Install dependencies
+
+```shell
+pip install -r requirements.txt
+```
+
 ## Dataset
 
 As dataset we use the StandordCars Dataset, which consists of around 8000 images in the train set. It can be downloaded from [Kaggle](https://www.kaggle.com/datasets/jessicali9530/stanford-cars-dataset). Unzip the dataset compressed file and rename the folder as `stanford_cars`, place it into the root folder.
@@ -17,16 +23,20 @@ As dataset we use the StandordCars Dataset, which consists of around 8000 images
 Display some images of the StandordCars Dataset.
 
 ```shell
-python3 show_dataset.py
+python show_dataset.py
 ```
+
+<img src="./docs/show_dataset.png" alt="show_dataset" style="zoom:33%;" />
 
 ## Forward noising
 
 We can perform forward noising to show the effect of diffusion intuitively.
 
 ```shell
-python3 forward_noising.py
+python forward_noising.py
 ```
+
+<img src="./docs/forward_noising.png" alt="forward_noising" style="zoom:33%;" />
 
 ## Build the U-Net model
 
@@ -41,7 +51,7 @@ python3 forward_noising.py
 to show the architecture of u-net model, we can run:
 
 ```shell
-python3 unet.py
+python unet.py
 ```
 
 ## Train the model
@@ -49,11 +59,15 @@ python3 unet.py
 Start training the U-Net model, after training, the model will save in folder `trained_models`.
 
 ```shell
-python3 training_model.py
+python training_model.py
 ```
 
 ## Sample an image
 
+Sample an image using trained U-Net model, the image will saved as `sample.png`.
+
 ```shell
-python3 sampling.py
+python sampling.py
 ```
+
+<img src="./docs/sample.png" alt="sample" style="zoom:50%;" />

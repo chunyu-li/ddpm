@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 def show_dataset(dataset, num_samples=20, cols=4):
     """Plots some samples from the dataset"""
-    plt.figure(figsize=(15, 15))
+    plt.figure(figsize=(10, 10))
     for i, img in enumerate(dataset):
         if i == num_samples:
             break
@@ -12,8 +12,6 @@ def show_dataset(dataset, num_samples=20, cols=4):
         plt.imshow(img[0])
     plt.show()
 
-train_dataset = torchvision.datasets.ImageFolder(
-    root='./stanford_cars/car_data/car_data/train'
-)
 
+train_dataset = torchvision.datasets.ImageFolder(root="./stanford_cars/car_data/car_data/train")
 show_dataset(train_dataset)
