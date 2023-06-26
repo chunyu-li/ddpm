@@ -1,0 +1,9 @@
+/nohup.out
+/sample.png
+/stanford_cars/
+/trained_models/
+/test.py
+.DS_Store
+__pycache__/
+.idea/
+.vscode/
